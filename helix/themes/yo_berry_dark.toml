@@ -1,0 +1,15 @@
+# Helix theme inspired by Zenbones & Alabaster with radix colors.
+# Author: Michael McClintock @mrmcc3
+# License: MIT
+
+inherits = "yo_berry"
+
+[palette]
+
+# mauveDark. shift p1-p5 -> p2-p6
+p2 = "#121113"
+p3 = "#1a191b"
+p4 = "#232225"
+p5 = "#2b292d"
+p6 = "#323035"
+
