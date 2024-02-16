@@ -8,52 +8,52 @@ config.adjust_window_size_when_changing_font_size = false
 config.keys = {
   {
     key = 'r',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ResetTerminal,
   },
   {
     key = 'q',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.QuitApplication,
   },
   {
     key = 'p',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ActivateCommandPalette,
   },
   {
     key = 'c',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.CopyTo 'ClipboardAndPrimarySelection',
   },
   {
     key = 'v',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.PasteFrom 'Clipboard',
   },
   {
     key = 'V',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.PasteFrom 'PrimarySelection',
   },
   {
     key = 't',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.SpawnTab 'CurrentPaneDomain',
   },
   {
-    key = 'w',
-    mods = 'SUPER',
+    key = 'W',
+    mods = 'ALT',
     action = act.CloseCurrentTab { confirm = true },
   },
   {
     key = '[',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ActivateTabRelative(-1),
   },
   {
     key = ']',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ActivateTabRelative(1),
   },
   {
@@ -113,27 +113,27 @@ config.keys = {
   },
   {
     key = 'v',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.PasteFrom 'Clipboard',
   },
   {
     key = '=',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.IncreaseFontSize,
   },
   {
     key = '-',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.DecreaseFontSize,
   },
   {
     key = '_',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ResetFontSize,
   },
   {
     key = ' ',
-    mods = 'SUPER|SHIFT',
+    mods = 'ALT|SHIFT',
     action = act.CharSelect {
       copy_on_select = true,
       copy_to = 'ClipboardAndPrimarySelection',
@@ -141,7 +141,7 @@ config.keys = {
   },
   {
     key = 'C',
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ActivateCopyMode,
   }
 }
@@ -149,7 +149,7 @@ config.keys = {
 for i = 1, 4 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = 'SUPER',
+    mods = 'ALT',
     action = act.ActivateTab(i - 1)
   })
 end
@@ -157,7 +157,7 @@ end
 for i = 1, 4 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = 'SUPER|SHIFT',
+    mods = 'ALT|SHIFT',
     action = act.ActivateTab(i + 3)
   })
 end
