@@ -8,132 +8,112 @@ config.adjust_window_size_when_changing_font_size = false
 config.keys = {
   {
     key = 'r',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ResetTerminal,
   },
   {
     key = 'q',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.QuitApplication,
   },
   {
     key = 'p',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivateCommandPalette,
   },
   {
     key = 'c',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.CopyTo 'ClipboardAndPrimarySelection',
   },
   {
     key = 'v',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.PasteFrom 'Clipboard',
   },
   {
-    key = 'V',
-    mods = 'ALT',
-    action = act.PasteFrom 'PrimarySelection',
-  },
-  {
     key = 't',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.SpawnTab 'CurrentPaneDomain',
   },
   {
     key = 'W',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.CloseCurrentTab { confirm = true },
   },
   {
     key = '[',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivateTabRelative(-1),
   },
   {
     key = ']',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivateTabRelative(1),
   },
   {
-    key = 'v',
-    mods = 'ALT',
-    action = act.SplitVertical,
-  },
-  {
-    key = 'c',
-    mods = 'ALT',
-    action = act.SplitHorizontal,
-  },
-  {
     key = 'H',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.SplitPane { direction = 'Left' },
   }, 
   {
     key = 'J',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.SplitPane { direction = 'Down' },
   }, 
   {
     key = 'K',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.SplitPane { direction = 'Up' },
   },
   {
     key = 'L',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.SplitPane { direction = 'Right' },
   },
   {
     key = 'w',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.CloseCurrentPane { confirm = true },
   },
   {
     key = 'h',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivatePaneDirection 'Left',
   },
   {
     key = 'j',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivatePaneDirection 'Down',
   },
   {
     key = 'k',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivatePaneDirection 'Up',
   },
   {
     key = 'l',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivatePaneDirection 'Right',
   },
   {
-    key = 'v',
-    mods = 'ALT',
-    action = act.PasteFrom 'Clipboard',
-  },
-  {
     key = '=',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.IncreaseFontSize,
   },
   {
     key = '-',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.DecreaseFontSize,
   },
   {
     key = '_',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ResetFontSize,
   },
   {
     key = ' ',
-    mods = 'ALT|SHIFT',
+    mods = 'CTRL|SHIFT',
     action = act.CharSelect {
       copy_on_select = true,
       copy_to = 'ClipboardAndPrimarySelection',
@@ -141,23 +121,23 @@ config.keys = {
   },
   {
     key = 'C',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivateCopyMode,
   }
 }
 
-for i = 1, 4 do
+for i = 1, 8 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = 'ALT',
+    mods = 'CTRL',
     action = act.ActivateTab(i - 1)
   })
 end
 
-for i = 1, 4 do
+for i = 1, 8 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = 'ALT|SHIFT',
+    mods = 'CTRL|SHIFT',
     action = act.ActivateTab(i + 3)
   })
 end
